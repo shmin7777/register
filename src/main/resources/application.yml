@@ -1,0 +1,32 @@
+server:
+  port: ${running.port:30002}
+  shutdown: graceful
+
+  
+spring:
+  datasource:
+    url: jdbc:mysql://192.168.87.101:3456/mtf
+    username: openlabs
+    password: openlabs
+  jpa:
+    hibernate:
+      ddl-auto: update # 운영시에는 validate 추천
+    show-sql: true
+          
+
+    
+logging:
+  logback:
+    rollingpolicy:
+      max-file-size: 100MB
+      max-history: 7
+  level:
+    root: INFO
+    com.zaxxer.hikari: DEBUG
+    kr.co.openlabs: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level [%X{GLOBALID}-%X{BRANCHID}] %logger{36} [%4L] - %m%n"
+    file: "[%d{HH:mm:ss.SSS}][%-5level][%t][%X{GLOBALID}-%X{BRANCHID}][%logger.%method:line%line] - %msg%n"
+  file: 
+    name: "/tmp/logs/mtf-register.log"
+    
