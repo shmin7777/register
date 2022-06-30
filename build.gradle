@@ -1,9 +1,8 @@
 plugins {
-	id 'org.springframework.boot' version '2.7.1'
+	id 'org.springframework.boot' version '2.6.6'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
 }
-
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
@@ -28,6 +27,9 @@ configurations {
 
 
 dependencies {
+ 	implementation('kr.co.openlabs:mtf-core:0.0.1-SNAPSHOT') {
+        changing=true
+    }
 	implementation('kr.co.openlabs:mtf-client:0.0.1-SNAPSHOT') {
             changing=true
         } 
