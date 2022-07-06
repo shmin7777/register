@@ -5,10 +5,14 @@ mtf:
     reuse-server-count : 1
     netty:
       server-url: 
+        - '192.168.87.103:8081'
+        - '192.168.87.104:8081'
         - '192.168.87.105:8081'
- #       - 'dev.openlabs.co.kr:18081'
       thread-worker: 0
       retry-cnt: 3
       request-timeout: 1000
   ignite-client:
-    addresses: 192.168.87.105:8100
+    addresses: 
+        - '192.168.87.103:8100'
+        - '192.168.87.104:8100'
+        - '192.168.87.105:8100'
