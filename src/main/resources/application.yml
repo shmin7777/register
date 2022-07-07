@@ -25,7 +25,7 @@ logging:
     com.zaxxer.hikari: DEBUG
     kr.co.openlabs: DEBUG
   pattern:
-    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level [%X{GLOBALID}-%X{BRANCHID}] %logger{36} [%4L] - %m%n"
+    console: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level [%X{GLOBALID}-%X{BRANCHID}] %logger{36} [%4L] - %m%n"
     file: "[%d{HH:mm:ss.SSS}][%-5level][%t][%X{GLOBALID}-%X{BRANCHID}][%logger.%method:line%line] - %msg%n"
   file: 
     name: "/tmp/logs/mtf-register.log"

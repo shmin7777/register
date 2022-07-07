@@ -18,13 +18,8 @@ public class RegisterController {
     
     @GetMapping("/register")
     public String regist(String code, String gid) {
-        log.info("gid::::"+MtfContext.getXid());
-        MtfContext.removeAll();
-        if(!gid.equals("")) {
+        if (gid != "" && gid != null)
             MtfContext.setXid(gid);
-            log.info("gid::::set"+gid);
-        }
-    
         registerService.regist(code);
         return "Success";
     }
