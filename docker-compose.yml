@@ -1,0 +1,7 @@
+version: '3.3'
+services:
+  register:
+    image: register
+    ports:
+      - 30002:30002
+    container_name: register
